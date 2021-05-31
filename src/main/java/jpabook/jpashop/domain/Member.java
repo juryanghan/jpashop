@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -22,4 +23,8 @@ public class Member {
 
     @OneToMany(mappedBy ="member") //
     private List<Order> order = new ArrayList<>();
+
+
+    public Collection<Order> getOrders() {
+    }
 }
